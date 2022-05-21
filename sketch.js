@@ -39,7 +39,7 @@ function setup() {
         canvas.position(0,0);
         canvas.style('z-index', '-1');
     } else {
-        canvas = createCanvas(displayWidth, displayHeight);
+        canvas = createCanvas(displayWidth, displayHeight*1.5);
         canvas.position(0,0);
         canvas.style('z-index', '-1');
     }
