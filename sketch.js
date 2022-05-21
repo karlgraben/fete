@@ -1,5 +1,6 @@
 let fr = 30;
 let img;
+var canvas;
 
 function randomminmax(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
@@ -34,9 +35,13 @@ function preload(){
 function setup() {
     // code for setup
     if (displayWidth > 900) {
-        createCanvas(displayWidth, displayHeight);
+        canvas = createCanvas(displayWidth, displayHeight);
+        canvas.position(0,0);
+        canvas.style('z-index', '-1');
     } else {
-        createCanvas(displayWidth, displayWidth*3.8);
+        canvas = createCanvas(displayWidth, displayHeight);
+        canvas.position(0,0);
+        canvas.style('z-index', '-1');
     }
 
     noStroke();
@@ -66,7 +71,7 @@ function setup() {
     xpos_7 =  width / 3.2;
     ypos_7 = height / 3.2;
 
-    xpos_8 =  width / 2;
+    xpos_8 =  width / 2.7;
     ypos_8 = height / 1.5;
 
     xpos_9 =  width/ 2.3;
@@ -172,35 +177,4 @@ function draw(){
     image(img_7, xpos_7, ypos_7, 50, 50);
     image(img_8, xpos_8, ypos_8, 50, 50);
     image(img_9, xpos_9, ypos_9, 50, 50);
-
-    // Text
-    let capital = 'Hallo Freund*innen!';
-    textSize(40);
-    fill(255,200,0);
-    text(capital, 5, 10, displayWidth -5);
-
-    let maintext_1 = 'Nach einiger Zeit des geduldigen und respektvollen Abstandhaltens kann die ganze innere Anspannung mal wieder mit einem ekstatischen Rausch des gemeinsamen Abzappelns überwunden werden. Daher wollen wir mit euch und uns eine wohltuende Fete in unserem Palais zelebrieren. Natürlich ist für dufte DJs, welche tanzbare Rhythmen präsentieren, eine flippige Atmosphäre mit der ein oder anderen Überraschung und Drinks gesorgt. Es ist aber auch durchaus erwünscht, dass ihr noch selbst das ein oder andere Getränk mitbringt! Da für uns ein paar Unkosten entstehen, steht es euch frei, uns über den folgenden Link mit etwas monetärer Liebe zu versorgen:'
-    textSize(25);
-    fill(255, 255, 255);
-    text(maintext_1, 5, 80, displayWidth - 5);
-
-    let link = createA('https://www.paypal.me/sophialaubrock', 'Hier monetäre Liebe spenden', '_blank');
-    link.position(displayWidth / 4, displayWidth*2);
-
-    let maintext_2 = 'Was gibt es sonst noch so zu erzählen? Ach ja, das Wichtigste: Wir freuen uns alle überdimensional auf euch und den gemeinsamen Abend. Es ist ja auch schon ein, zwei Jahre her, dass wir einen großen Haufen von Freund*innen und Freunden von Freundinnen in Zeit und Raum fusionieren konnten!'
-    textSize(25);
-    fill(255, 255, 255);
-    text(maintext_2, 5, displayWidth*2 + 70, displayWidth - 5);
-
-    let people = 'Dicke Küsschen von Cynthia, Eli, Gideon, Jonny, Moritz, Nora, Roberto, Sophia und Tabea'
-    textSize(18);
-    fill(255,255,255);
-    text(people, 5, displayWidth*3, displayWidth -5);
-
-    let info1 = '30_july_2022_9pm'
-    let info2 = '_____aachen'
-    textheight_info = 15
-    textSize(textheight_info);
-    text(info1, 5, displayWidth*3.8 - textheight_info*3, displayWidth - 5);
-    text(info2, 5, displayWidth*3.8 - textheight_info*2, displayWidth - 5);
 }
