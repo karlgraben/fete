@@ -16,11 +16,12 @@ h2{
 }
 
 h5{
+    font-size: 5vw;
     color: beige;
 }
 
 p{
-    font-size: 3vw;
+    font-size: 5vw;
     text-align: justify;
     color: beige;
 }
