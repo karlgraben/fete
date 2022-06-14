@@ -35,11 +35,11 @@ function preload(){
 function setup() {
     // code for setup
     if (displayWidth > 900) {
-        canvas = createCanvas(displayWidth, displayHeight);
+        canvas = createCanvas(displayWidth, displayHeight*6);
         canvas.position(0,0);
         canvas.style('z-index', '-1');
     } else {
-        canvas = createCanvas(displayWidth, displayHeight*1.5);
+        canvas = createCanvas(displayWidth, displayHeight*3);
         canvas.position(0,0);
         canvas.style('z-index', '-1');
     }
@@ -60,7 +60,7 @@ function setup() {
     ypos_3 = height / 4;
 
     xpos_4 =  width / 5;
-    ypos_4 = height / 5;
+    ypos_4 = height / 1.3;
 
     xpos_5 =  width / 2;
     ypos_5 = height / 5.5;
